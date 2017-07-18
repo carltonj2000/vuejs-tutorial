@@ -1,32 +1,49 @@
+new Vue({
+  el: '#vue-app',
+  data: {
+    output: 'Your fav food'
+  },
+  methods: {
+    readRefs: function () {
+      this.output = this.$refs.input.value;
+      console.log(this.$refs.input.value);
+      console.log(this.$refs.test.innerText);
+    }
+  },
+  computed: {
+  }
+});
+
+Vue.component('greeting', {
+  template: '<p>I am {{name}}. <button v-on:click="changeName">Change name</button></p>',
+  data: function () {
+    return {
+      name: 'Yoshi'
+    }
+  },
+  methods: {
+    changeName: function () {
+      this.name =  'Mario';
+    }
+  }
+});
+
 const one = new Vue({
   el: '#vue-app-one',
   data: {
-    title: 'Vue App One'
   },
   methods: {
   },
   computed: {
-    greet: function () {
-      return "Hello from app one ;>"
-    }
   }
 });
 
 const two = new Vue({
   el: '#vue-app-two',
   data: {
-    title: 'Vue App Two'
   },
   methods: {
-    changeTitle: function () {
-      one.title = "Title Changed"
-    }
   },
   computed: {
-    greet: function () {
-      return "Hello from app two ;>"
-    }
   }
 });
-
-two.title = "Changed from outside"
