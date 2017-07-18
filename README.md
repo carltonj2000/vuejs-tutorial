@@ -10,3 +10,14 @@ Code create by following the video tutorial noted below.
     [Vue JS 2 Tutorial #14 - Multiple Vue Instances](https://www.youtube.com/watch?v=k5p3TozQt84&t=7s)
   - index4.html,
     [Vue JS 2 Tutorial #15-xx Components](https://www.youtube.com/watch?v=EAONyIKrZN0)
+
+## vue cli
+
+Run
+```
+npm install -g vue-cli
+vue init webpack-simple vuejs-playlist
+cd vuejs-playlist/
+npm install
+npm run dev
+```
